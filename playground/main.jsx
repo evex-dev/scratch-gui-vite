@@ -1,4 +1,6 @@
 import './eruda'
 import renderGUI from '../src/playground/render-gui.jsx'
 
-console.log(renderGUI)
+const div = document.createElement('div')
+document.body.append(div)
+renderGUI(div)
