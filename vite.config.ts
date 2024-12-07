@@ -2,9 +2,8 @@ import { defineConfig, ResolvedConfig, type Plugin } from 'vite'
 import { reactVirtualized } from './plugins/reactVirtualized.ts'
 import * as path from 'node:path'
 import * as fs from 'node:fs/promises'
-import postcss from 'postcss'
-import postcssModules from 'postcss-modules'
 import * as url from 'node:url'
+import { existsSync } from 'node:fs'
 
 const scratchGuiPlugin = (): Plugin => {
   let resolvedConfig!: ResolvedConfig
@@ -79,6 +78,9 @@ const allModuleCSSPlugin = (): Plugin => {
         /*if (importer.includes('/gui')) {
             console.log(importer, 0, name.join('.'))
         }*/
+       if (importer.includes('node_modules')) {
+        console.log(name.join('.'))
+       }
         return path.join(importer, '..', name.join('.'))
       }
     },
@@ -89,6 +91,9 @@ const allModuleCSSPlugin = (): Plugin => {
           noModuleId = url.fileURLToPath(import.meta.resolve(noModuleId))
         }
         //console.log(id, noModuleId)
+        if (!existsSync(noModuleId)) {
+          return
+        }
         return await fs.readFile(noModuleId, { encoding: 'utf-8' })
       }
     }

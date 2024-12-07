@@ -13,6 +13,9 @@ import {detectLocale} from './detect-locale';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+import guiRedux from '../reducers/gui.js';
+import ScratchPaint from 'scratch-paint';
+
 /*
  * Higher Order Component to provide redux state. If an `intl` prop is provided
  * it will override the internal `intl` redux state
@@ -44,7 +47,6 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
             } else {
                 // You are right, this is gross. But it's necessary to avoid
                 // importing unneeded code that will crash unsupported browsers.
-                const guiRedux = require('../reducers/gui');
                 const guiReducer = guiRedux.default;
                 const {
                     guiInitialState,
@@ -53,7 +55,7 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
                     initPlayer,
                     initTelemetryModal
                 } = guiRedux;
-                const {ScratchPaintReducer} = require('scratch-paint');
+                const {ScratchPaintReducer} = ScratchPaint;
 
                 let initializedGui = guiInitialState;
                 if (props.isFullScreen || props.isPlayerOnly) {

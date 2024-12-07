@@ -168,5 +168,10 @@
       "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
       "editor-msgs(\\.js)?$": "<rootDir>/test/__mocks__/editor-msgs-mock.js"
     }
+  },
+  "patchedDependencies": {
+    "@scratch/paper@0.11.0": "patches/@scratch%2Fpaper@0.11.0.patch",
+    "scratch-paint@3.0.20": "patches/scratch-paint@3.0.20.patch",
+    "parse-color@1.0.0": "patches/parse-color@1.0.0.patch"
   }
 }

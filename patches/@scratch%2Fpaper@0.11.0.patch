@@ -1,0 +1,10 @@
+diff --git a/dist/paper-full.js b/dist/paper-full.js
+index a4c955176b05f0fa4116db3e01d6947fd570dff2..365541d589b24672cdf0463fde3f15bd76cca08d 100644
+--- a/dist/paper-full.js
++++ b/dist/paper-full.js
+@@ -17558,3 +17558,5 @@ if (typeof define === 'function' && define.amd) {
+ 
+ return paper;
+ }.call(this, typeof self === 'object' ? self : null);
++
++export default paper
