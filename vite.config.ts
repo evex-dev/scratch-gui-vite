@@ -1,4 +1,4 @@
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig, ResolvedConfig, type Plugin } from 'vite'
 import { reactVirtualized } from './plugins/reactVirtualized.ts'
 import * as path from 'node:path'
 import * as fs from 'node:fs/promises'
@@ -7,8 +7,12 @@ import postcssModules from 'postcss-modules'
 import * as url from 'node:url'
 
 const scratchGuiPlugin = (): Plugin => {
+  let resolvedConfig!: ResolvedConfig
   return {
     name: 'vite-plugin-scratch',
+    async configResolved(config) {
+      resolvedConfig = config
+    },
     async resolveId(source, importer, options) {
       if (!importer) {
         return
@@ -30,14 +34,29 @@ const scratchGuiPlugin = (): Plugin => {
         return
       }
       const resolvedPath = decodeURIComponent(b64).replace(/\?.*$/, '')
+      const targetUrl = `/${path.relative(resolvedConfig.root, resolvedPath).replace(/\\/g, '/')}`
       if (prefix === 'arraybuffer') {
         return {
-          code: `import url from '${resolvedPath}'\nexport default await fetch(url).then(res => res.arrayBuffer())`
+          code: `import url from '${targetUrl}'\nexport default await fetch(url).then(res => res.arrayBuffer())`
         }
-      }
-      return {
-        code: `import url from '${resolvedPath}'
-        export default url`
+      } else if (prefix === 'raw') {
+        return {
+          code: `import url from '${targetUrl}'
+          export default await fetch(url).then(res => res.text())`
+        }
+      } else if (prefix === 'base64') {
+        return {
+          code: `import url from '${targetUrl}'
+          const blob = await fetch(url).then(res => res.blob())
+          const reader = new FileReader()
+          const promise = new Promise((resolve, reject) => {
+            // dataurl to base64
+            reader.onload = () => resolve(reader.result.split(',')[1])
+            reader.onerror = reject
+          })
+          reader.readAsDataURL(blob)
+          export default await promise`
+        }
       }
     },
   }
