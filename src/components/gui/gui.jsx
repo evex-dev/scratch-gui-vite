@@ -6,12 +6,12 @@ import {defineMessages, FormattedMessage, injectIntl, intlShape} from 'react-int
 import {connect} from 'react-redux';
 import MediaQuery from 'react-responsive';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import tabStyles from 'react-tabs/style/react-tabs.css';
+import tabStyles from 'react-tabs/style/react-tabs.css?module';
 import VM from 'scratch-vm';
 import Renderer from 'scratch-render';
 
-import Blocks from '../../containers/blocks.jsx';
-import CostumeTab from '../../containers/costume-tab.jsx';
+//import Blocks from '../../containers/blocks.jsx';
+import CostumeTab from '../../containers/costume-tab.jsx';/*
 import TargetPane from '../../containers/target-pane.jsx';
 import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
@@ -20,8 +20,9 @@ import Box from '../box/box.jsx';
 import MenuBar from '../menu-bar/menu-bar.jsx';
 import CostumeLibrary from '../../containers/costume-library.jsx';
 import BackdropLibrary from '../../containers/backdrop-library.jsx';
-import Watermark from '../../containers/watermark.jsx';
+import Watermark from '../../containers/watermark.jsx';*/
 
+/*
 import Backpack from '../../containers/backpack.jsx';
 import WebGlModal from '../../containers/webgl-modal.jsx';
 import TipsLibrary from '../../containers/tips-library.jsx';
@@ -29,13 +30,13 @@ import Cards from '../../containers/cards.jsx';
 import Alerts from '../../containers/alerts.jsx';
 import DragLayer from '../../containers/drag-layer.jsx';
 import ConnectionModal from '../../containers/connection-modal.jsx';
-import TelemetryModal from '../telemetry-modal/telemetry-modal.jsx';
+import TelemetryModal from '../telemetry-modal/telemetry-modal.jsx';*/
 
 import layout, {STAGE_SIZE_MODES} from '../../lib/layout-constants';
 import {resolveStageSize} from '../../lib/screen-utils';
 import {themeMap} from '../../lib/themes';
 
-import styles from './gui.css';
+import styles from './gui.css?module';
 import addExtensionIcon from './icon--extensions.svg';
 import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';

@@ -6,7 +6,7 @@ import Meter from '../meter/meter.jsx';
 import AudioTrimmer from '../../containers/audio-trimmer.jsx';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
-import styles from './record-modal.css';
+import styles from './record-modal.css?module';
 import backIcon from './icon--back.svg';
 import stopIcon from './icon--stop-playback.svg';
 import playIcon from './icon--play.svg';

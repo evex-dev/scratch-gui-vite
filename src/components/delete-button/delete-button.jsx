@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-import styles from './delete-button.css';
+import styles from './delete-button.css?module';
 import deleteIcon from './icon--delete.svg';
 
 const DeleteButton = props => (

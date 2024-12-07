@@ -6,7 +6,7 @@ import ReactModal from 'react-modal';
 
 import Box from '../box/box.jsx';
 
-import styles from './telemetry-modal.css';
+import styles from './telemetry-modal.css?module';
 
 const messages = defineMessages({
     label: {

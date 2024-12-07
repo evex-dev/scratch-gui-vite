@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import bindAll from 'lodash.bindall';
 import ReactTooltip from 'react-tooltip';
 
-import styles from './action-menu.css';
+import styles from './action-menu.css?module';
 
 const CLOSE_DELAY = 300; // ms
 

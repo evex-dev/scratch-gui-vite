@@ -74,7 +74,7 @@ import {
 
 import collectMetadata from '../../lib/collect-metadata';
 
-import styles from './menu-bar.css';
+import styles from './menu-bar.css?module';
 
 import helpIcon from '../../lib/assets/icon--tutorials.svg';
 import mystuffIcon from './icon--mystuff.png';

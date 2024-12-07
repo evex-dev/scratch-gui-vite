@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './waveform.css';
+import styles from './waveform.css?module';
 
 // Waveform is expensive to compute, make sure it only updates when data does
 // by using PureComponent. In future can be changed back to function with React.memo

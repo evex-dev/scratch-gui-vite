@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import greenFlagIcon from './icon--green-flag.svg';
-import styles from './green-flag.css';
+import styles from './green-flag.css?module';
 
 const GreenFlagComponent = function (props) {
     const {

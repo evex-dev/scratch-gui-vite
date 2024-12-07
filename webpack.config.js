@@ -26,7 +26,7 @@ const baseConfig = new ScratchWebpackConfigBuilder(
         rootPath: path.resolve(__dirname),
         enableReact: true,
         shouldSplitChunks: false,
-        publicPath: 'auto'
+        publicPath: 'auto',
     })
     .setTarget('browserslist')
     .merge({
@@ -78,11 +78,19 @@ const baseConfig = new ScratchWebpackConfigBuilder(
                 noErrorOnMissing: true
             }
         ]
-    }));
+    }))
 
 if (!process.env.CI) {
     baseConfig.addPlugin(new webpack.ProgressPlugin());
 }
+baseConfig.addModuleRule({
+    // Match `.js`, `.jsx`, `.ts` or `.tsx` files
+    test: /\.[jt]sx?$/,
+    loader: 'esbuild-loader',
+    options: {
+        target: 'esnext'
+    }
+})
 
 // build the shipping library in `dist/`
 const distConfig = baseConfig.clone()

@@ -15,7 +15,7 @@ import MenuItemContainer from '../../containers/menu-item.jsx';
 import UserAvatar from './user-avatar.jsx';
 import dropdownCaret from './dropdown-caret.svg';
 
-import styles from './account-nav.css';
+import styles from './account-nav.css?module';
 
 const AccountNavComponent = ({
     className,

@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import {sections} from './sections/sections';
 import GA4 from '../../lib/analytics';
 
-import styles from './debug-modal.css';
+import styles from './debug-modal.css?module';
 import debugIcon from './icons/icon--debug.svg';
 import debugIconInverted from './icons/icon--debug-inverted.svg';
 import closeIcon from './icons/icon--close.svg';
