@@ -1,4 +1,4 @@
-import ScratchBlocks from 'scratch-blocks';
+import ScratchBlocks from '@evex/scratch-blocks';
 import {defaultColors} from './themes';
 
 const categorySeparator = '<sep gap="36"/>';
