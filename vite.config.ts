@@ -4,7 +4,7 @@ import * as path from 'node:path'
 import * as fs from 'node:fs/promises'
 import * as url from 'node:url'
 import { existsSync } from 'node:fs'
-import { build } from 'esbuild'
+import { cjsPlugin } from './plugins/cjs.ts'
 
 const scratchGuiPlugin = (): Plugin => {
   let resolvedConfig!: ResolvedConfig
@@ -122,36 +122,10 @@ const allModuleCSSPlugin = (): Plugin => {
   }
 }
 
-const CJS_PATCHES = [
-  'css-vendor',
-  '@scratch/paper',
-  'color-convert'
-]
-const cjs = (): Plugin => {
-  return {
-    name: 'vite-plugin-cjs',
-    async load(id, options) {
-      for (const patch of CJS_PATCHES) {
-        if (id.includes(`node_modules/${patch}`)) {
-          const built = await build({
-            entryPoints: [id.replace(/\?.*/, '')],
-            write: false,
-            bundle: true,
-            format: 'esm'
-          })
-          return {
-            code: built.outputFiles[0].text
-          }
-        }
-      }
-    },
-  }
-}
-
 export default defineConfig({
   plugins: [
-    cjs(),
     allModuleCSSPlugin(),
+    cjsPlugin(),
     reactVirtualized(),
     scratchGuiPlugin()
   ],
