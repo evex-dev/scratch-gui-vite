@@ -13,8 +13,8 @@ import {detectLocale} from './detect-locale';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-import guiRedux from '../reducers/gui.js';
-import ScratchPaint from 'scratch-paint';
+import * as guiRedux from '../reducers/gui.js';
+import * as ScratchPaint from 'scratch-paint';
 
 /*
  * Higher Order Component to provide redux state. If an `intl` prop is provided
