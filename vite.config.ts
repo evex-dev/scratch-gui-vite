@@ -4,6 +4,7 @@ import * as path from 'node:path'
 import * as fs from 'node:fs/promises'
 import * as url from 'node:url'
 import { existsSync } from 'node:fs'
+import { cjsPlugin } from './plugins/cjs.ts'
 
 const scratchGuiPlugin = (): Plugin => {
   let resolvedConfig!: ResolvedConfig
@@ -120,9 +121,11 @@ const allModuleCSSPlugin = (): Plugin => {
     }*/
   }
 }
+
 export default defineConfig({
   plugins: [
     allModuleCSSPlugin(),
+    cjsPlugin(),
     reactVirtualized(),
     scratchGuiPlugin()
   ],
