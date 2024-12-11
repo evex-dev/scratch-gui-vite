@@ -133,5 +133,10 @@ export default defineConfig({
     modules: {
       scopeBehaviour: 'local'
     }
+  },
+  esbuild: {
+    define: {
+      global: 'globalThis'
+    }
   }
 })

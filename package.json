@@ -34,6 +34,7 @@
     }
   },
   "dependencies": {
+    "@evex-dev/scratch-paint": "^0.1.1",
     "@evex/scratch-blocks": "npm:@jsr/evex__scratch-blocks",
     "@microbit/microbit-universal-hex": "^0.2.2",
     "arraybuffer-loader": "^1.0.6",
@@ -87,7 +88,6 @@
     "redux-throttle": "^0.1.1",
     "scratch-audio": "^2.0.0",
     "scratch-l10n": "^5.0.0",
-    "scratch-paint": "^3.0.0",
     "scratch-render": "^2.0.0",
     "scratch-render-fonts": "^1.0.2",
     "scratch-storage": "^2.3.1",
@@ -148,6 +148,7 @@
     "semantic-release": "19.0.5",
     "stream-browserify": "3.0.0",
     "url-loader": "4.1.1",
+    "vite": "^6.0.3",
     "vite-plugin-commonjs": "^0.10.4",
     "vite-plugin-css-modules": "^0.0.1",
     "vite-plugin-standard-css-modules": "^0.0.11",
@@ -170,8 +171,5 @@
       "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
       "editor-msgs(\\.js)?$": "<rootDir>/test/__mocks__/editor-msgs-mock.js"
     }
-  },
-  "patchedDependencies": {
-    "scratch-paint@3.0.20": "patches/scratch-paint@3.0.20.patch"
   }
 }

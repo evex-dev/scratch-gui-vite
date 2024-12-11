@@ -14,6 +14,8 @@ import DeleteConfirmationPrompt from '../components/delete-confirmation-prompt/d
 
 import SpriteSelectorItemComponent from '../components/sprite-selector-item/sprite-selector-item.jsx';
 
+console.log(storage)
+
 class SpriteSelectorItem extends React.PureComponent {
     constructor (props) {
         super(props);

@@ -3,9 +3,9 @@ import * as esbuild from 'esbuild'
 import * as path from 'node:path'
 
 const CJS_PATCHES = [
-  '@scratch/paper',
-  'parse-color',
-  'react-popover'
+  //'@scratch/paper',
+  //'parse-color',
+  //'react-popover',
 ]
 
 const cached = new Map<string, string>()
@@ -21,6 +21,9 @@ const getBuild = async (id: string) => {
     bundle: true,
     write: false,
     logLevel: 'error',
+    define: {
+      global: 'globalThis'
+    }
   })
   const code = result.outputFiles?.[0].text
   if (!code) {
