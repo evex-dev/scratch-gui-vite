@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@evex-dev/scratch-paint": "^0.1.1",
-    "@evex/scratch-blocks": "npm:@jsr/evex__scratch-blocks@^0.1.4",
+    "@evex/scratch-blocks": "npm:@jsr/evex__scratch-blocks@^0.1.5",
     "@microbit/microbit-universal-hex": "^0.2.2",
     "arraybuffer-loader": "^1.0.6",
     "balance-text": "^3.3.1",
