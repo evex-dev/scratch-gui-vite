@@ -5,7 +5,7 @@ import React from 'react';
 import Button from '../button/button.jsx';
 
 import communityIcon from './icon--see-community.svg';
-import styles from './community-button.css?module';
+import styles from './community-button.module.css';
 
 const CommunityButton = ({
     className,

@@ -3,7 +3,7 @@ import {FormattedMessage} from 'react-intl';
 
 import turboIcon from './icon--turbo.svg';
 
-import styles from './turbo-mode.css?module';
+import styles from './turbo-mode.module.css';
 
 const TurboMode = () => (
     <div className={styles.turboContainer}>

@@ -12,7 +12,7 @@ import TagButton from '../../containers/tag-button.jsx';
 import Spinner from '../spinner/spinner.jsx';
 import {CATEGORIES} from '../../../src/lib/libraries/decks/index.jsx';
 
-import styles from './library.css?module';
+import styles from './library.module.css';
 
 const messages = defineMessages({
     filterPlaceholder: {

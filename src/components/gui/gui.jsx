@@ -6,7 +6,7 @@ import {defineMessages, FormattedMessage, injectIntl, intlShape} from 'react-int
 import {connect} from 'react-redux';
 import MediaQuery from 'react-responsive';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import tabStyles from 'react-tabs/style/react-tabs.css?module';
+import 'react-tabs/style/react-tabs.css';
 import VM from 'scratch-vm';
 import Renderer from 'scratch-render';
 
@@ -35,12 +35,20 @@ import layout, {STAGE_SIZE_MODES} from '../../lib/layout-constants';
 import {resolveStageSize} from '../../lib/screen-utils';
 import {themeMap} from '../../lib/themes';
 
-import styles from './gui.css?module';
+import styles from './gui.module.css';
 import addExtensionIcon from './icon--extensions.svg';
 import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
 import DebugModal from '../debug-modal/debug-modal.jsx';
+console.log(styles)
+const tabStyles = {
+    reactTabsTab: 'react-tabs__tab',
+    reactTabsTabList: 'react-tabs__tab-list',
+    reactTabsTabPanel: 'react-tabs__tab-panel',
+    reactTabsTabPanelSelected: 'react-tabs__tab-panel--selected',
+    reactTabsTabSelected: 'react-tabs__tab--selected'
+}
 
 const messages = defineMessages({
     addExtension: {

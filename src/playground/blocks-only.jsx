@@ -8,7 +8,7 @@ import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import AppStateHOC from '../lib/app-state-hoc.jsx';
 
-import styles from './blocks-only.css?module';
+import styles from './blocks-only.module.css';
 
 const mapStateToProps = state => ({vm: state.scratchGui.vm});
 

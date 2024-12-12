@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Box from '../box/box.jsx';
 import Alert from '../../containers/alert.jsx';
 
-import styles from './alerts.css?module';
+import styles from './alerts.module.css';
 
 const AlertsComponent = ({
     alertsList,

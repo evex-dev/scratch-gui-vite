@@ -5,7 +5,7 @@ import ReactModal from 'react-modal';
 import classNames from 'classnames';
 import {sections} from './sections/sections';
 
-import styles from './debug-modal.css?module';
+import styles from './debug-modal.module.css';
 import debugIcon from './icons/icon--debug.svg';
 import debugIconInverted from './icons/icon--debug-inverted.svg';
 import closeIcon from './icons/icon--close.svg';

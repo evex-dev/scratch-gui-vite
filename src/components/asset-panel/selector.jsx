@@ -8,7 +8,7 @@ import SortableAsset from './sortable-asset.jsx';
 import SortableHOC from '../../lib/sortable-hoc.jsx';
 import DragConstants from '../../lib/drag-constants';
 
-import styles from './selector.css?module';
+import styles from './selector.module.css';
 
 const Selector = props => {
     const {

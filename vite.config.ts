@@ -65,14 +65,14 @@ const scratchGuiPlugin = (): Plugin => {
 
 export default defineConfig({
   plugins: [
-    scratchCSS(),
+    //scratchCSS(),
     cjsPlugin(),
     reactVirtualized(),
     scratchGuiPlugin()
   ],
   css: {
     modules: {
-      scopeBehaviour: 'local'
+      localsConvention: 'camelCaseOnly'
     }
   },
   esbuild: {

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './menu.css?module';
+import styles from './menu.module.css';
 
 const MenuComponent = ({
     className = '',

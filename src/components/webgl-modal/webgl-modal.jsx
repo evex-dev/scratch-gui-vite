@@ -4,7 +4,7 @@ import ReactModal from 'react-modal';
 import Box from '../box/box.jsx';
 import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
 
-import styles from './webgl-modal.css?module';
+import styles from './webgl-modal.module.css';
 
 const messages = defineMessages({
     label: {
