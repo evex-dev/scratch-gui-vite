@@ -74,6 +74,7 @@
     "@vitejs/plugin-react-swc": "^3.7.2",
     "esbuild": "^0.24.0",
     "jest": "21.2.1",
-    "vite": "^6.0.3"
+    "vite": "^6.0.3",
+    "xhr": "^2.6.0"
   }
 }
