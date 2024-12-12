@@ -70,6 +70,7 @@
   },
   "devDependencies": {
     "@types/bun": "^1.1.14",
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "esbuild": "^0.24.0",
     "jest": "21.2.1",
     "vite": "^6.0.3"
