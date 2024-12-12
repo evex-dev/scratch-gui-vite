@@ -1,7 +1,6 @@
 import { defineConfig, ResolvedConfig, type Plugin } from 'vite'
 import { reactVirtualized } from './plugins/reactVirtualized.ts'
 import * as path from 'node:path'
-import { cjsPlugin } from './plugins/cjs.ts'
 import react from '@vitejs/plugin-react-swc'
 
 const scratchGuiPlugin = (): Plugin => {
@@ -62,8 +61,6 @@ const scratchGuiPlugin = (): Plugin => {
 
 export default defineConfig({
   plugins: [
-    //scratchCSS(),
-    cjsPlugin(),
     reactVirtualized(),
     scratchGuiPlugin(),
     react()
