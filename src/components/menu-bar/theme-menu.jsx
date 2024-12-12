@@ -11,7 +11,7 @@ import {persistTheme} from '../../lib/themes/themePersistance';
 import {openThemeMenu, themeMenuOpen} from '../../reducers/menus.js';
 import {setTheme} from '../../reducers/theme.js';
 
-import styles from './settings-menu.css';
+import styles from './settings-menu.module.css';
 
 import dropdownCaret from './dropdown-caret.svg';
 

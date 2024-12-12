@@ -3,7 +3,6 @@ import React from 'react';
 import bindAll from 'lodash.bindall';
 import ConnectionModalComponent, {PHASES} from '../components/connection-modal/connection-modal.jsx';
 import VM from 'scratch-vm';
-import analytics from '../lib/analytics';
 import extensionData from '../lib/libraries/extensions/index.jsx';
 import {connect} from 'react-redux';
 
@@ -48,11 +47,6 @@ class ConnectionModal extends React.Component {
         this.setState({
             phase: PHASES.connecting
         });
-        analytics.event({
-            category: 'extensions',
-            action: 'connecting',
-            label: this.props.extensionId
-        });
     }
     handleDisconnect () {
         try {
@@ -83,39 +77,19 @@ class ConnectionModal extends React.Component {
             this.setState({
                 phase: PHASES.error
             });
-            analytics.event({
-                category: 'extensions',
-                action: 'connecting error',
-                label: this.props.extensionId
-            });
         }
     }
     handleConnected () {
         this.setState({
             phase: PHASES.connected
         });
-        analytics.event({
-            category: 'extensions',
-            action: 'connected',
-            label: this.props.extensionId
-        });
     }
     handleHelp () {
         window.open(this.state.extension.helpLink, '_blank');
-        analytics.event({
-            category: 'extensions',
-            action: 'help',
-            label: this.props.extensionId
-        });
     }
     handleUpdatePeripheral () {
         this.setState({
             phase: PHASES.updatePeripheral
-        });
-        analytics.event({
-            category: 'extensions',
-            action: 'enter peripheral update flow',
-            label: this.props.extensionId
         });
     }
     /**
@@ -124,12 +98,6 @@ class ConnectionModal extends React.Component {
      * @returns {Promise} Resolves when the update is complete.
      */
     handleSendUpdate (progressCallback) {
-        analytics.event({
-            category: 'extensions',
-            action: 'send update to peripheral',
-            label: this.props.extensionId
-        });
-
         // TODO: get this functionality from the extension
         return selectAndUpdateMicroBit(progressCallback);
     }

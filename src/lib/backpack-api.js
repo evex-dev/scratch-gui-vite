@@ -1,4 +1,3 @@
-import xhr from 'xhr';
 import costumePayload from './backpack/costume-payload';
 import soundPayload from './backpack/sound-payload';
 import spritePayload from './backpack/sprite-payload';
@@ -18,19 +17,17 @@ const getBackpackContents = ({
     token,
     limit,
     offset
-}) => new Promise((resolve, reject) => {
-    xhr({
+}) => fetch(`${host}/${username}?limit=${limit}&offset=${offset}`, {
         method: 'GET',
-        uri: `${host}/${username}?limit=${limit}&offset=${offset}`,
         headers: {'x-token': token},
-        json: true
-    }, (error, response) => {
-        if (error || response.statusCode !== 200) {
-            return reject(new Error(response.status));
+    }).then((response) => {
+        if (!response.ok) {
+            throw new Error(response.status)
         }
-        return resolve(response.body.map(item => includeFullUrls(item, host)));
+        return response.json()
+    }).then(json => {
+        return json.map(item => includeFullUrls(item, host))
     });
-});
 
 const saveBackpackObject = ({
     host,

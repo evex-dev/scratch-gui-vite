@@ -1,7 +1,7 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import classNames from 'classnames';
-import styles from './loader.css';
+import styles from './loader.module.css';
 import PropTypes from 'prop-types';
 
 import topBlock from './top-block.svg';

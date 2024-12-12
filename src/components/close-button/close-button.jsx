@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-import styles from './close-button.css';
+import styles from './close-button.module.css';
 import closeIcon from './icon--close.svg';
 import closeIconOrange from './icon--close-orange.svg';
 import backIcon from '../../lib/assets/icon--back.svg';

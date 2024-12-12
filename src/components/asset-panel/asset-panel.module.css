@@ -1,0 +1,40 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+
+.wrapper {
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid var(--ui-black-transparent);
+    background: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+[dir="ltr"] .wrapper {
+    border-top-right-radius: var(--space);
+    border-bottom-right-radius: var(--space);
+}
+
+[dir="rtl"] .wrapper {
+    border-top-left-radius: var(--space);
+    border-bottom-left-radius: var(--space);
+}
+
+.detail-area {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: visible;
+}
+
+[dir="ltr"] .detail-area {
+    border-left: 1px solid var(--ui-black-transparent);
+}
+
+[dir="rtl"] .detail-area {
+    border-right: 1px solid var(--ui-black-transparent);
+}
+
+body {
+
+}

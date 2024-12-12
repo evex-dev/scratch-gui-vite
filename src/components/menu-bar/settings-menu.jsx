@@ -8,8 +8,8 @@ import MenuBarMenu from './menu-bar-menu.jsx';
 import ThemeMenu from './theme-menu.jsx';
 import {MenuSection} from '../menu/menu.jsx';
 
-import menuBarStyles from './menu-bar.css';
-import styles from './settings-menu.css';
+import menuBarStyles from './menu-bar.module.css';
+import styles from './settings-menu.module.css';
 
 import dropdownCaret from './dropdown-caret.svg';
 import settingsIcon from './icon--settings.svg';

@@ -4,7 +4,7 @@ import React from 'react';
 
 import filterIcon from './icon--filter.svg';
 import xIcon from './icon--x.svg';
-import styles from './filter.css';
+import styles from './filter.module.css';
 
 const FilterComponent = props => {
     const {

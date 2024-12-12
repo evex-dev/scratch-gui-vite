@@ -7,7 +7,7 @@ import webdriver from 'selenium-webdriver';
 
 const {Button, By, until} = webdriver;
 
-const USE_HEADLESS = process.env.USE_HEADLESS !== 'no';
+const USE_HEADLESS = import.meta.env.USE_HEADLESS !== 'no';
 
 // The main reason for this timeout is so that we can control the timeout message and report details;
 // if we hit the Jasmine default timeout then we get a terse message that we can't control.

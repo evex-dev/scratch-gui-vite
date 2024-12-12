@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import classNames from 'classnames';
 import {sections} from './sections/sections';
-import GA4 from '../../lib/analytics';
 
-import styles from './debug-modal.css';
+import styles from './debug-modal.module.css';
 import debugIcon from './icons/icon--debug.svg';
 import debugIconInverted from './icons/icon--debug-inverted.svg';
 import closeIcon from './icons/icon--close.svg';
@@ -22,10 +21,6 @@ const messages = defineMessages({
 });
 
 const logTopicChange = topicIndex => {
-    GA4.event({
-        category: 'change_topic_debug_modal',
-        label: sections[topicIndex].id
-    });
 };
 
 const DebugModal = ({isOpen, onClose = () => {}}) => {
@@ -58,18 +53,11 @@ const DebugModal = ({isOpen, onClose = () => {}}) => {
     }, [setSelectedTopicIndex]);
 
     const handleClose = useCallback(() => {
-        GA4.event({
-            category: 'close_debug_modal'
-        });
         onClose();
     }, [onClose]);
 
     useEffect(() => {
         if (isOpen) {
-            GA4.event({
-                category: 'open_debug_modal',
-                label: sections[selectedTopicIndex].id
-            });
         }
     }, [isOpen]);
 
