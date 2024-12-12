@@ -11,7 +11,7 @@ import AppStateHOC from '../lib/app-state-hoc.jsx';
 
 import {setPlayer} from '../reducers/mode';
 
-if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
+if (import.meta.env.NODE_ENV === 'production' && typeof window === 'object') {
     // Warn before navigating away
     window.onbeforeunload = () => true;
 }

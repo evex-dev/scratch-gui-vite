@@ -30,7 +30,7 @@ export default appTarget => {
     const backpackHostMatches = window.location.href.match(/[?&]backpack_host=([^&]*)&?/);
     const backpackHost = backpackHostMatches ? backpackHostMatches[1] : null;
 
-    if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
+    if (import.meta.env.NODE_ENV === 'production' && typeof window === 'object') {
         // Warn before navigating away
         window.onbeforeunload = () => true;
     }

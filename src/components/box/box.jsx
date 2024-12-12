@@ -65,7 +65,7 @@ const Box = props => {
                 width: width,
                 height: height
             },
-            process.env.DEBUG ? {
+            import.meta.env.DEBUG ? {
                 backgroundColor: getRandomColor(),
                 outline: `1px solid black`
             } : {},
