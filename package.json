@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@evex-dev/scratch-paint": "^0.1.1",
+    "@evex/blackbox-ai": "npm:@jsr/evex__blackbox-ai",
     "@evex/scratch-blocks": "npm:@jsr/evex__scratch-blocks@^0.1.4",
     "@microbit/microbit-universal-hex": "^0.2.2",
     "arraybuffer-loader": "^1.0.6",
@@ -103,6 +104,7 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "sass": "^1.82.0",
     "@babel/cli": "7.25.9",
     "@babel/core": "7.26.0",
     "@babel/eslint-parser": "7.25.9",

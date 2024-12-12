@@ -5,6 +5,7 @@ import * as fs from 'node:fs/promises'
 import * as url from 'node:url'
 import { existsSync } from 'node:fs'
 import { cjsPlugin } from './plugins/cjs.ts'
+import { scratchCSS } from './plugins/scratchCSS.ts'
 
 const scratchGuiPlugin = (): Plugin => {
   let resolvedConfig!: ResolvedConfig
@@ -61,70 +62,10 @@ const scratchGuiPlugin = (): Plugin => {
     },
   }
 }
-const allModuleCSSPlugin = (): Plugin => {
-  const cachedMap = new Map<string, string>()
-  return {
-    name: 'vite-plugin-all-css-as-module',
-    enforce: 'pre',
-    resolveId(source, importer) {
-      if (!importer) {
-        return
-      }
-      if (source.endsWith('.css?module')) {
-        const names = source.split('.')
-        const name = [...names.slice(0, -1), 'module', 'css']
-        if (!source.startsWith('.')) {
-          return name.join('.')
-        }
-        /*if (importer.includes('/gui')) {
-            console.log(importer, 0, name.join('.'))
-        }*/
-       if (importer.includes('node_modules')) {
-        console.log(name.join('.'))
-       }
-        return path.join(importer, '..', name.join('.'))
-      }
-    },
-    async load(id) {
-      if (id.endsWith('.module.css')) {
-        let noModuleId = id.replace(/\.module\.css$/, '.css')
-        if (noModuleId.startsWith('react-tabs')) {
-          noModuleId = url.fileURLToPath(import.meta.resolve(noModuleId))
-        }
-        //console.log(id, noModuleId)
-        if (!existsSync(noModuleId)) {
-          return
-        }
-        return await fs.readFile(noModuleId, { encoding: 'utf-8' })
-      }
-    }
-
-   /* async transform(code, id) {
-      const idKey = id.replace(/\?., '')
-      if (id.endsWith('.css?main-css')) {
-        return cachedMap.get(idKey)
-      }
-      if (id.endsWith('.css?module')) {
-        let modules: Record<string, string> = {}
-        const processed = await postcss([
-          postcssModules({
-            getJSON(_cssFilename, newModules, _outputFilename) {
-              modules = newModules
-            },
-          })
-        ]).process(code)
-        cachedMap.set(idKey, processed.css)
-        return {
-          code: `export default ${JSON.stringify(modules)}`,
-        }
-      }
-    }*/
-  }
-}
 
 export default defineConfig({
   plugins: [
-    allModuleCSSPlugin(),
+    scratchCSS(),
     cjsPlugin(),
     reactVirtualized(),
     scratchGuiPlugin()
