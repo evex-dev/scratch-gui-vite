@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.12](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.11...v5.1.12) (2024-12-12)
+
+
+### Bug Fixes
+
+* spacing on debug modal description ([6855d2b](https://github.com/scratchfoundation/scratch-gui/commit/6855d2bce3077969681f231dec4f9fdf853ebbaa))
+* update debug modal icons to newest version ([adc9842](https://github.com/scratchfoundation/scratch-gui/commit/adc98423af081ba7fede673e903d0b53e6878b2b))
+
+## [5.1.11](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.10...v5.1.11) (2024-12-12)
+
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([1041db3](https://github.com/scratchfoundation/scratch-gui/commit/1041db385b95a2349d85b529fbfc4de8cb66c306))
+
+## [5.1.10](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.9...v5.1.10) (2024-12-11)
+
+
+### Bug Fixes
+
+* trigger version update ([eb5f676](https://github.com/scratchfoundation/scratch-gui/commit/eb5f6766678af3ca2e19051da7e7625b13473dab))
+
+## [5.1.9](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.8...v5.1.9) (2024-12-10)
+
+
+### Bug Fixes
+
+* uepr-38: update debug modal image ([face25a](https://github.com/scratchfoundation/scratch-gui/commit/face25a17921400a4418ea6633b5fbd59df1405e))
+
+## [5.1.8](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.7...v5.1.8) (2024-12-10)
+
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([cece7dc](https://github.com/scratchfoundation/scratch-gui/commit/cece7dc1e70863f33617352d2dade3ae6ad6546b))
+
+## [5.1.7](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.6...v5.1.7) (2024-12-09)
+
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([32871b4](https://github.com/scratchfoundation/scratch-gui/commit/32871b4d3645887b5968d7d54585fb3cc60ae791))
+
+## [5.1.6](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.5...v5.1.6) (2024-12-07)
+
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([7835a01](https://github.com/scratchfoundation/scratch-gui/commit/7835a01a36abe5dd1c7555b00a4d2d5fffc67f03))
+
 ## [5.1.5](https://github.com/scratchfoundation/scratch-gui/compare/v5.1.4...v5.1.5) (2024-12-05)
 
 

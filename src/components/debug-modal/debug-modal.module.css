@@ -24,6 +24,7 @@
     overflow-x: visible;
     box-shadow: 0 4px 4px 0 var(--ui-black-transparent-10);
     outline: none;
+    margin: 0 40px;
 
     .modal-header {
         display: flex;
