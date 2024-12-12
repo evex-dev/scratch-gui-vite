@@ -11,7 +11,8 @@
     "url": "https://github.com/scratchfoundation/scratch-gui.git"
   },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@evex-dev/scratch-paint": "^0.1.1",

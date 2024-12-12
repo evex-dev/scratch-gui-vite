@@ -76,6 +76,10 @@ export default defineConfig({
   esbuild: {
     define: {
       global: 'globalThis'
-    }
+    },
+    target: 'esnext'
+  },
+  build: {
+    target: 'esnext'
   }
 })
