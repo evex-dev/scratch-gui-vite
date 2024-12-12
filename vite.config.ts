@@ -1,11 +1,7 @@
 import { defineConfig, ResolvedConfig, type Plugin } from 'vite'
 import { reactVirtualized } from './plugins/reactVirtualized.ts'
 import * as path from 'node:path'
-import * as fs from 'node:fs/promises'
-import * as url from 'node:url'
-import { existsSync } from 'node:fs'
 import { cjsPlugin } from './plugins/cjs.ts'
-import { scratchCSS } from './plugins/scratchCSS.ts'
 
 const scratchGuiPlugin = (): Plugin => {
   let resolvedConfig!: ResolvedConfig
