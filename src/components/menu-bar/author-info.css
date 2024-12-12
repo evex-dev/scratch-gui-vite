@@ -2,7 +2,7 @@
 @import "../../css/units.css";
 
 .author-info {
-    color: $ui-white;
+    color: var(--ui-white);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: flex-start;
@@ -15,18 +15,18 @@
 }
 
 .project-title {
-    max-width: $menu-bar-item-max-width;
+    max-width: var(--menu-bar-item-max-width);
     display: block;
     overflow: hidden;
-    font-size: $menu-bar-large-font-size;
+    font-size: var(--menu-bar-large-font-size);
     font-weight: bold;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .username-line {
-    max-width: $menu-bar-item-max-width;
-    font-size: $menu-bar-standard-font-size;
+    max-width: var(--menu-bar-item-max-width);
+    font-size: var(--menu-bar-standard-font-size);
     display: block;
     overflow: hidden;
     font-weight: normal;
@@ -36,4 +36,8 @@
 
 .username {
     font-weight: bold;
+}
+
+body {
+
 }

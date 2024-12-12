@@ -2,7 +2,7 @@
 
 .outlined-button {
     cursor: pointer;
-    border-radius: $form-radius;
+    border-radius: var(--form-radius);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -26,4 +26,8 @@
 
 .content {
     white-space: nowrap;
+}
+
+body {
+
 }

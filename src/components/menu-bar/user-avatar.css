@@ -2,9 +2,13 @@
 @import "../../css/units.css";
 
 .user-thumbnail {
-    width: $menu-bar-button-size;
-    height: $menu-bar-button-size;
-    border-radius: $form-radius;
+    width: var(--menu-bar-button-size);
+    height: var(--menu-bar-button-size);
+    border-radius: var(--form-radius);
     vertical-align: middle;
-    box-shadow: 0 0 0 1px $ui-black-transparent;
+    box-shadow: 0 0 0 1px var(--ui-black-transparent);
+}
+
+body {
+
 }

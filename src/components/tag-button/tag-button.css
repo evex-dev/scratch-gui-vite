@@ -3,10 +3,10 @@
 
 .tag-button {
     padding: .625rem 1rem;
-    background: $looks-secondary;
+    background: var(--looks-secondary);
     border-radius: 1.375rem;
-    color: $ui-white;
-    height: $library-filter-bar-height;
+    color: var(--ui-white);
+    height: var(--library-filter-bar-height);
 }
 
 .tag-button-icon {
@@ -15,5 +15,9 @@
 }
 
 .active {
-    background: $data-primary;
+    background: var(--data-primary);
+}
+
+body {
+
 }

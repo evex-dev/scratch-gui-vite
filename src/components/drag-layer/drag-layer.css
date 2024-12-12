@@ -5,7 +5,7 @@
 .drag-layer {
     position: fixed;
     pointer-events: none;
-    z-index: $z-index-drag-layer;
+    z-index: var(--z-index-drag-layer);
     left: 0;
     top: 0;
     width: 100%;
@@ -29,10 +29,14 @@
     margin-top: -50%;
 
     padding: 0.25rem;
-    border: 2px solid $looks-secondary;
-    background: $ui-white;
+    border: 2px solid var(--looks-secondary);
+    background: var(--ui-white);
     border-radius: 0.5rem;
 
     /* Use the same drop shadow as stage dragging */
-    box-shadow: 5px 5px 5px $ui-black-transparent;
+    box-shadow: 5px 5px 5px var(--ui-black-transparent);
+}
+
+body {
+
 }

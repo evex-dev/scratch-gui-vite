@@ -9,10 +9,14 @@
 }
 
 .progress-ring .progress-ring-ring {
-    stroke: $looks-light-transparent;
+    stroke: var(--looks-light-transparent);
 }
 
 .progress-ring .progress-ring-value {
-    stroke: $looks-secondary;
+    stroke: var(--looks-secondary);
     stroke-linecap: round;
+}
+
+body {
+
 }

@@ -14,9 +14,13 @@
 }
 
 [dir="ltr"] .stage-selector-wrapper {
-    margin-left: calc($space / 2);
+    margin-left: calc(var(--space) / 2);
 }
 
 [dir="rtl"] .stage-selector-wrapper {
-    margin-right: calc($space / 2);
+    margin-right: calc(var(--space) / 2);
+}
+
+body {
+
 }

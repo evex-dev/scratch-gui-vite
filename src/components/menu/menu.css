@@ -2,16 +2,16 @@
 
 .menu {
     position: absolute;
-    border: 1px solid $ui-black-transparent;
+    border: 1px solid var(--ui-black-transparent);
     border-radius: 0 0 8px 8px;
-    background-color: $looks-secondary;
+    background-color: var(--looks-secondary);
     padding: 0;
     margin: 0;
     min-width: 186px;
     max-width: 260px;
     overflow: visible;
-    color: $ui-white;
-    box-shadow: 0 8px 8px 0 $ui-black-transparent;
+    color: var(--ui-white);
+    box-shadow: 0 8px 8px 0 var(--ui-black-transparent);
 }
 
 .menu.left {
@@ -36,7 +36,7 @@
 .menu-item.active,
 .menu-item:hover,
 .menu-item.expanded {
-    background-color: $ui-black-transparent;
+    background-color: var(--ui-black-transparent);
 }
 
 .menu-item.hoverable {
@@ -44,7 +44,7 @@
 }
 
 .menu-section {
-    border-top: 1px solid $ui-black-transparent;
+    border-top: 1px solid var(--ui-black-transparent);
 }
 
 .submenu {
@@ -70,7 +70,7 @@
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-color: $ui-black-transparent $looks-secondary;
+    scrollbar-color: var(--ui-black-transparent) var(--looks-secondary);
     border-radius: 8px;
 }
 
@@ -89,11 +89,15 @@
 }
 
 .submenu > .menu::-webkit-scrollbar-track {
-    background: $looks-secondary;
+    background: var(--looks-secondary);
 }
 
 .submenu > .menu::-webkit-scrollbar-thumb {
-    background-color: $ui-black-transparent;
+    background-color: var(--ui-black-transparent);
     border-radius: 12px;
-    border: 3px solid $looks-secondary;
+    border: 3px solid var(--looks-secondary);
+}
+
+body {
+
 }

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: calc(2 * $space);
+    padding: calc(2 * var(--space));
 }
 
 .row {
@@ -19,7 +19,7 @@
 }
 
 .row + .row {
-    margin-top: calc(2 * $space);
+    margin-top: calc(2 * var(--space));
 }
 
 .input-group {
@@ -28,28 +28,28 @@
 }
 
 [dir="ltr"] .input-group + .input-group {
-    margin-left: calc(2 * $space);
+    margin-left: calc(2 * var(--space));
 }
 
 [dir="rtl"] .input-group + .input-group {
-    margin-right: calc(2 * $space);
+    margin-right: calc(2 * var(--space));
 }
 
 [dir="ltr"] .input-group {
-    padding-right: calc(2 * $space);
-    border-right: 1px dashed $ui-black-transparent;
+    padding-right: calc(2 * var(--space));
+    border-right: 1px dashed var(--ui-black-transparent);
 }
 
 [dir="rtl"] .input-group {
-    padding-left: calc(2 * $space);
-    border-left: 1px dashed $ui-black-transparent;
+    padding-left: calc(2 * var(--space));
+    border-left: 1px dashed var(--ui-black-transparent);
 }
 
 [dir="rtl"] .row-reverse > .input-group {
     padding-left: 0;
-    padding-right: calc(2 * $space);
+    padding-right: calc(2 * var(--space));
     border-left: none;
-    border-right: 1px dashed $ui-black-transparent;
+    border-right: 1px dashed var(--ui-black-transparent);
 }
 
 .waveform-container {
@@ -61,22 +61,22 @@
     position: relative;
 
     background: hsla(300, 53%, 60%, 0.15);
-    border: 1px solid $ui-black-transparent;
+    border: 1px solid var(--ui-black-transparent);
     border-radius: 5px;
 
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-$border-radius: 0.25rem;
+
 
 .button {
     height: 2rem;
     padding: 0.35rem;
     outline: none;
     background: white;
-    border-radius: $border-radius;
-    border: 1px solid $ui-black-transparent;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--ui-black-transparent);
     cursor: pointer;
     font-size: 0.85rem;
     user-select: none;
@@ -85,7 +85,7 @@ $border-radius: 0.25rem;
 }
 
 .button:active {
-    background: $looks-transparent;
+    background: var(--looks-transparent);
 }
 
 .button:focus::before {
@@ -95,7 +95,7 @@ $border-radius: 0.25rem;
     right: -1px;
     bottom: -1px;
     left: -1px;
-    border: 1px solid $looks-secondary;
+    border: 1px solid var(--looks-secondary);
     z-index: 1;
 }
 
@@ -110,9 +110,9 @@ $border-radius: 0.25rem;
     height: 3rem;
     width: 3rem;
     outline: none;
-    background: $looks-secondary;
+    background: var(--looks-secondary);
     border-radius: 100%;
-    border: 4px solid $ui-white-dim;
+    border: 4px solid var(--ui-white-dim);
     cursor: pointer;
     padding: 0.75rem;
     user-select: none;
@@ -132,7 +132,7 @@ $border-radius: 0.25rem;
 .trim-button {
     display: flex;
     align-items: center;
-    color: $text-primary;
+    color: var(--text-primary);
     font-size: 0.625rem;
     user-select: none;
 
@@ -152,7 +152,7 @@ $border-radius: 0.25rem;
 
 .effect-button {
     flex-basis: 60px;
-    color: $text-primary;
+    color: var(--text-primary);
     font-size: 0.625rem;
     user-select: none;
     padding: 0.25rem 0;
@@ -170,7 +170,7 @@ $border-radius: 0.25rem;
 
 .tool-button {
     flex-basis: 60px;
-    color: $text-primary;
+    color: var(--text-primary);
     font-size: 0.625rem;
     user-select: none;
     padding: 0.25rem 0;
@@ -212,23 +212,27 @@ $border-radius: 0.25rem;
 
 [dir="rtl"] .button:not(:last-child) {
     border-left: none;
-    border-right: 1px solid $ui-black-transparent;
+    border-right: 1px solid var(--ui-black-transparent);
 }
 
 .button-group .button:first-child,
 [dir="rtl"] .button-group .button:last-child,
 .button-group .button:first-child:focus::before,
 [dir="rtl"] .button-group .button:last-child:focus::before {
-    border-radius: $form-radius 0 0 $form-radius;
+    border-radius: var(--form-radius) 0 0 var(--form-radius);
 }
 
 .button-group .button:last-child,
 [dir="rtl"] .button-group .button:first-child,
 .button-group .button:last-child:focus::before,
 [dir="rtl"] .button-group .button:first-child:focus::before {
-    border-radius: 0 $form-radius $form-radius 0;
+    border-radius: 0 var(--form-radius) var(--form-radius) 0;
 }
 
 .button:disabled > img {
     opacity: 0.25;
+}
+
+body {
+  --border-radius: 0.25rem;
 }

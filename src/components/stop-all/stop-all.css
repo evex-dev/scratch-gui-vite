@@ -10,7 +10,7 @@
 }
 
 .stop-all:hover {
-    background-color: $looks-light-transparent;
+    background-color: var(--looks-light-transparent);
 }
 
 .stop-all {
@@ -19,4 +19,8 @@
 
 .stop-all.is-active {
     opacity: 1;
+}
+
+body {
+
 }

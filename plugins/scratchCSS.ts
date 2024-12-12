@@ -73,8 +73,8 @@ export const scratchCSS = (): Plugin => {
           return
         }
         const css = await fs.readFile(noModuleId, { encoding: 'utf-8' })
-        const cssCode = convertSassToCss(css)
-        return cssCode
+       // const cssCode = convertSassToCss(css)
+        return css
       }
     }
 

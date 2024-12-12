@@ -9,22 +9,22 @@
     align-content: center;
     padding: 0 0.95rem;
     max-width: 260px;
-    height: $menu-bar-height;
+    height: var(--menu-bar-height);
     overflow: hidden;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: $ui-white;
+    color: var(--ui-white);
     font-size: .75rem;
     font-weight: normal;
 }
 
 [dir="ltr"] .user-info .avatar {
-    margin-right: calc($space * .8125);
+    margin-right: calc(var(--space) * .8125);
 }
 
 [dir="rtl"] .user-info .avatar {
-    margin-left: calc($space * .8125);
+    margin-left: calc(var(--space) * .8125);
 }
 
 .user-info .avatar {
@@ -33,11 +33,11 @@
 }
 
 [dir="ltr"] .user-info .dropdown-caret-position {
-  margin-left: calc($space * .8125);
+  margin-left: calc(var(--space) * .8125);
 }
 
 [dir="rtl"] .user-info .dropdown-caret-position {
-  margin-right: calc($space * .8125);
+  margin-right: calc(var(--space) * .8125);
 }
 
 .user-info .dropdown-caret-position {
@@ -50,4 +50,8 @@
     font-size: .75rem;
     line-height: .9375rem;
     font-weight: bold;
+}
+
+body {
+
 }

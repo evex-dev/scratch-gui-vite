@@ -4,10 +4,10 @@
 
 .monitor-container {
     position: absolute;
-    background: $ui-primary;
-    z-index: $z-index-monitor;
-    border: 1px solid $ui-black-transparent;
-    border-radius: calc($space / 2);
+    background: var(--ui-primary);
+    z-index: var(--z-index-monitor);
+    border: 1px solid var(--ui-black-transparent);
+    border-radius: calc(var(--space) / 2);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     transition: box-shadow 0.2s;
@@ -20,7 +20,7 @@
 }
 
 .dragging {
-    z-index: $z-index-monitor-dragging;
+    z-index: var(--z-index-monitor-dragging);
     box-shadow: 3px 3px 5px #888888;
 }
 
@@ -43,7 +43,7 @@
     min-width: 40px;
     text-align: center;
     margin: 0 5px;
-    border-radius: calc($space / 2);
+    border-radius: calc(var(--space) / 2);
     padding: 0 2px;
     white-space: pre-wrap;
     transform: translateZ(0); /* Fixes flickering in Safari */
@@ -75,18 +75,18 @@
 }
 
 .list-header {
-    background: $ui-white;
-    border-bottom: 1px solid $ui-black-transparent;
+    background: var(--ui-white);
+    border-bottom: 1px solid var(--ui-black-transparent);
     text-align: center;
     padding: 3px;
     font-size: 0.75rem;
     font-weight: bold;
-    color: $text-primary;
+    color: var(--text-primary);
     width: 100%;
 }
 
 .list-body {
-    background: $ui-primary;
+    background: var(--ui-primary);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
 
 .list-index {
     font-weight: bold;
-    color: $text-primary;
+    color: var(--text-primary);
     margin: 0 3px;
 }
 
@@ -114,21 +114,21 @@
     min-width: 40px;
     text-align: left;
     margin: 0 3px;
-    border-radius: calc($space / 2);
-    border: 1px solid $ui-black-transparent;
+    border-radius: calc(var(--space) / 2);
+    border: 1px solid var(--ui-black-transparent);
     flex-grow: 1;
     height: 22px;
 }
 
 .list-footer {
-    background: $ui-white;
+    background: var(--ui-white);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 3px;
     font-size: 0.75rem;
     font-weight: bold;
-    color: $text-primary;
+    color: var(--text-primary);
 }
 
 .list-empty {
@@ -184,4 +184,8 @@
 
 .footer-length {
     text-align: center;
+}
+
+body {
+
 }

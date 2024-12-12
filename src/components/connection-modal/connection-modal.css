@@ -7,11 +7,11 @@
 }
 
 .header {
-    background-color: $pen-tertiary;
+    background-color: var(--pen-tertiary);
 }
 
 .body {
-    background: $ui-white;
+    background: var(--ui-white);
 }
 
 .label {
@@ -38,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: $ui-white;
+    background-color: var(--ui-white);
     border-radius: 0.25rem;
     padding: 10px;
     width: 100%;
@@ -81,8 +81,8 @@
     border-radius: 0.25rem;
     font-weight: 600;
     font-size: 0.85rem;
-    background: $looks-secondary;
-    border: $looks-secondary;
+    background: var(--looks-secondary);
+    border: var(--looks-secondary);
     color: white;
     cursor: pointer;
 }
@@ -115,7 +115,7 @@
 .signal-bar:nth-of-type(4) { height: 100%; }
 
 .green-bar {
-    background-color: $pen-primary;
+    background-color: var(--pen-primary);
 }
 
 .radar-small {
@@ -173,9 +173,9 @@
     right: -15px;
     left: -15px;
     padding: 5px 5px;
-    background-color: $looks-secondary;
+    background-color: var(--looks-secondary);
     border-radius: 100%;
-    box-shadow: 0px 0px 0px 4px $looks-transparent;
+    box-shadow: 0px 0px 0px 4px var(--looks-transparent);
     /* animation: pulse-blue-ring 1s infinite ease-in-out alternate; */
     animation: wiggle 0.5s infinite ease-in-out alternate;
 
@@ -183,7 +183,7 @@
 
 @keyframes pulse-blue-ring {
     100% {
-        box-shadow: 0px 0px 0px 8px $looks-light-transparent;
+        box-shadow: 0px 0px 0px 8px var(--looks-light-transparent);
     }
 }
 
@@ -193,9 +193,9 @@
     right: -15px;
     left: -15px;
     padding: 5px 5px;
-    background-color: $pen-primary;
+    background-color: var(--pen-primary);
     border-radius: 100%;
-    box-shadow: 0px 0px 0px 4px $pen-transparent;
+    box-shadow: 0px 0px 0px 4px var(--pen-transparent);
 }
 
 @keyframes wiggle {
@@ -209,9 +209,9 @@
 .bluetooth-centered-icon {
     position: absolute;
     padding: 5px 5px;
-    background-color: $looks-secondary;
+    background-color: var(--looks-secondary);
     border-radius: 100%;
-    box-shadow: 0px 0px 0px 2px $looks-transparent;
+    box-shadow: 0px 0px 0px 2px var(--looks-transparent);
 }
 
 .peripheral-tile-widgets {
@@ -221,7 +221,7 @@
 
 .activityArea {
     height: 165px;
-    background-color: $looks-light-transparent;
+    background-color: var(--looks-light-transparent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,12 +269,12 @@
 }
 
 .help-step-number {
-    background: $pen-tertiary;
+    background: var(--pen-tertiary);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $ui-white;
+    color: var(--ui-white);
     font-weight: bold;
     min-width: 2rem;
     height: 2rem;
@@ -302,7 +302,7 @@
 .connection-button {
     padding: 0.6rem 0.75rem;
     border-radius: 0.5rem;
-    background: $looks-secondary;
+    background: var(--looks-secondary);
     color: white;
     font-weight: 600;
     font-size: 0.85rem;
@@ -314,7 +314,7 @@
 }
 
 .connection-button:disabled {
-    background: $looks-transparent;
+    background: var(--looks-transparent);
 }
 
 .segmented-button {
@@ -354,7 +354,7 @@
 }
 
 .red-button {
-    background: $red-primary;
+    background: var(--red-primary);
 }
 
 .corner-buttons {
@@ -365,7 +365,7 @@
 }
 
 .bottom-area {
-    background-color: $ui-white;
+    background-color: var(--ui-white);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -395,15 +395,15 @@
     display: flex;
     padding: 0.25rem 0.1rem;
     border-radius: 1rem;
-    background: $looks-light-transparent;
+    background: var(--looks-light-transparent);
 }
 
 .dots-holder-success {
-    background: $pen-transparent;
+    background: var(--pen-transparent);
 }
 
 .dots-holder-error {
-    background: $error-transparent;
+    background: var(--error-transparent);
 }
 
 .dot {
@@ -414,19 +414,19 @@
 }
 
 .inactive-step-dot {
-    background: $looks-transparent;
+    background: var(--looks-transparent);
 }
 
 .active-step-dot {
-    background: $looks-secondary;
+    background: var(--looks-secondary);
 }
 
 .success-dot {
-    background: $pen-primary;
+    background: var(--pen-primary);
 }
 
 .error-dot {
-    background: $error-primary;
+    background: var(--error-primary);
 }
 
 .scratch-link-error {
@@ -445,4 +445,8 @@
     resize: none;
     height: 60%;
     width: inherit;
+}
+
+body {
+
 }

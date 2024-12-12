@@ -24,11 +24,11 @@
 .body {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    background: $looks-secondary;
+    background: var(--looks-secondary);
 }
 
 .label {
-    color: $ui-white;
+    color: var(--ui-white);
     font-size: 1.25rem;
     font-weight: 700;
     margin: 1rem 0 1.5rem;
@@ -46,9 +46,9 @@
     width: 47%;
     padding: 0.75rem 1rem;
     border-radius: 2rem;
-    border: 1px solid $ui-black-transparent;
-    color: $looks-secondary;
-    background: $ui-white;
+    border: 1px solid var(--ui-black-transparent);
+    color: var(--looks-secondary);
+    background: var(--ui-white);
     font-weight: 600;
     font-size: 0.85rem;
     cursor: pointer;
@@ -72,3 +72,7 @@
     width: 1.5rem;
 }
 
+
+body {
+
+}

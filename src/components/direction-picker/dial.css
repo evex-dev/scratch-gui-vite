@@ -23,19 +23,23 @@
     width: 100%;
 }
 
-$dial-size: 40px;
+
 
 .dial-handle {
     cursor: pointer;
-    width: $dial-size;
-    height: $dial-size;
+    width: var(--dial-size);
+    height: var(--dial-size);
     /* Use margin to make positioning via top/left easier */
-    margin-left: calc($dial-size / -2);
-    margin-top: calc($dial-size / -2);
+    margin-left: calc(var(--dial-size) / -2);
+    margin-top: calc(var(--dial-size) / -2);
 }
 
 .gauge-path {
-    fill: $looks-transparent;
-    stroke: $looks-secondary;
+    fill: var(--looks-transparent);
+    stroke: var(--looks-secondary);
     stroke-width: 1px;
+}
+
+body {
+  --dial-size: 40px;
 }

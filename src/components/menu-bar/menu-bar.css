@@ -17,7 +17,7 @@
         simplifies by all of this by removing padding from the equation.
     */
     box-sizing: border-box;
-    height: $menu-bar-height;
+    height: var(--menu-bar-height);
 
     /*
         @todo: This adds ~20px in Chrome, when scrolling to the right,
@@ -25,10 +25,10 @@
         width: 100%;
     */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: $menu-bar-standard-font-size;
+    font-size: var(--menu-bar-standard-font-size);
     font-weight: bold;
-    background-color: $looks-secondary;
-    color: $ui-white;
+    background-color: var(--looks-secondary);
+    color: var(--ui-white);
 }
 
 .main-menu {
@@ -54,13 +54,13 @@
 .menu-bar-item {
     display: flex;
     text-decoration: none;
-    color: $ui-white;
+    color: var(--ui-white);
     user-select: none;
     align-self: center;
     position: relative;
     align-items: center;
     white-space: nowrap;
-    height: $menu-bar-height;
+    height: var(--menu-bar-height);
 }
 
 .menu-bar-item.hoverable {
@@ -69,11 +69,11 @@
 
 .menu-bar-item.active,
 .menu-bar-item.hoverable:hover {
-    background-color: $ui-black-transparent;
+    background-color: var(--ui-black-transparent);
 }
 
 .menu-bar-item.growable {
-    max-width: $menu-bar-item-max-width;
+    max-width: var(--menu-bar-item-max-width);
     flex: 1;
 }
 
@@ -99,17 +99,17 @@
 }
 
 .menu-bar-menu {
-    margin-top: $menu-bar-height;
-    z-index: $z-index-menu-bar;
+    margin-top: var(--menu-bar-height);
+    z-index: var(--z-index-menu-bar);
 }
 
 .feedback-link {
-    color: $looks-secondary;
+    color: var(--looks-secondary);
     text-decoration: none;
 }
 
 .feedback-button {
-    background-color: $ui-white;
+    background-color: var(--ui-white);
     height: 34px;
 }
 
@@ -124,11 +124,11 @@
 }
 
 .menu-bar-button {
-    height: $menu-bar-button-size;
+    height: var(--menu-bar-button-size);
 }
 
 .remix-button {
-    background-color: $pen-primary
+    background-color: var(--pen-primary)
 }
 
 .remix-button-icon {
@@ -172,8 +172,8 @@
 
 .profile-icon {
     margin: 0 .25rem;
-    width: $menu-bar-button-size;
-    border-radius: $form-radius;
+    width: var(--menu-bar-button-size);
+    border-radius: var(--form-radius);
 }
 
 .dropdown-caret-icon {
@@ -234,4 +234,8 @@
     .help-icon {
         margin-right: 0;
     }
+}
+
+body {
+
 }

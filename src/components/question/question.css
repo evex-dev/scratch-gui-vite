@@ -2,9 +2,9 @@
 @import "../../css/colors.css";
 
 .question-container {
-    margin: $space;
-    border: 1px solid $ui-black-transparent;
-    border-radius: $space;
+    margin: var(--space);
+    border: 1px solid var(--ui-black-transparent);
+    border-radius: var(--space);
     border-width: 2px;
     padding: 1rem;
     background: white;
@@ -14,8 +14,8 @@
     font-size: 0.75rem;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: $text-primary;
-    padding-bottom: $space;
+    color: var(--text-primary);
+    padding-bottom: var(--space);
 }
 
 .question-input {
@@ -25,24 +25,24 @@
 
 .question-submit-button {
     position: absolute;
-    top: calc($space / 2);
+    top: calc(var(--space) / 2);
 
-    width: calc(2rem - $space);
-    height: calc(2rem - $space);
+    width: calc(2rem - var(--space));
+    height: calc(2rem - var(--space));
 
     border: none;
     border-radius: 100%;
 
     color: white;
-    background: $looks-secondary;
+    background: var(--looks-secondary);
 }
 
 [dir="ltr"] .question-submit-button {
-    right: calc($space / 2);
+    right: calc(var(--space) / 2);
 }
 
 [dir="rtl"] .question-submit-button {
-    left: calc($space / 2);
+    left: calc(var(--space) / 2);
 }
 
 /* Input overrides: width, font-weight, focus outline and padding */
@@ -60,13 +60,17 @@
 }
 
 .question-input > input:focus {
-    box-shadow: 0px 0px 0px 3px $looks-transparent;
+    box-shadow: 0px 0px 0px 3px var(--looks-transparent);
 }
 
 .question-submit-button-icon {
-    width: calc(2rem - $space);
-    height: calc(2rem - $space);
+    width: calc(2rem - var(--space));
+    height: calc(2rem - var(--space));
     position: relative;
     right: -7px;
     left: -7px;
+}
+
+body {
+
 }

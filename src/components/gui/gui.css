@@ -7,8 +7,8 @@
 }
 
 .body-wrapper {
-    height: calc(100% - $menu-bar-height);
-    background-color: $ui-primary;
+    height: calc(100% - var(--menu-bar-height));
+    background-color: var(--ui-primary);
 }
 
 .body-wrapper * {
@@ -36,15 +36,15 @@
 .editor-wrapper {
     /*
         This is carefully balanced--  the minimum width at which the GUI will be displayed is 1024px.
-        At that size, the stage pane is 408px wide, with $space of padding to each side.
+        At that size, the stage pane is 408px wide, with var(--space) of padding to each side.
         However, we must also add the border width to the stage pane. All-in-all, the stage pane's final width is
-        408px + ($space + $stage-standard-border-width * 2) (one border & padding per left/right side).
+        408px + (var(--space) + var(--stage-standard-border-width) * 2) (one border & padding per left/right side).
 
         @todo This is in place to prevent "doubling up" of horizontal scrollbars in narrow windows, but there are likely
         much better ways to solve that (e.g. undo #2124, remove this flex-basis entirely). However, they run their own
         risks of breaking things, so let's just leave this as-is for the time being.
     */
-    flex-basis: calc(1024px - 408px - (($space + $stage-standard-border-width) * 2));
+    flex-basis: calc(1024px - 408px - ((var(--space) + var(--stage-standard-border-width)) * 2));
     flex-grow: 1;
     flex-shrink: 0;
     position: relative;
@@ -54,7 +54,7 @@
 }
 
 .tab-list {
-    height: $stage-menu-height;
+    height: var(--stage-menu-height);
     width: 250px; /* Match width of the toolbox */
     display: flex;
     align-items: flex-end;
@@ -75,13 +75,13 @@
     margin-bottom: 0;
 
     border-radius: 1rem 1rem 0 0;
-    border: 1px solid $ui-black-transparent;
+    border: 1px solid var(--ui-black-transparent);
 
     padding: 0.125rem 1.25rem 0;
     font-size: 0.75rem;
 
-    background-color: $ui-tertiary;
-    color: $text-primary-transparent;
+    background-color: var(--ui-tertiary);
+    color: var(--text-primary-transparent);
 
     display: flex;
     justify-content: center;
@@ -119,13 +119,13 @@
 }
 
 .tab:hover {
-  background-color: $ui-primary;
+  background-color: var(--ui-primary);
 }
 
 .tab.is-selected {
     height: 90%;
-    color: $looks-secondary;
-    background-color: $ui-white;
+    color: var(--looks-secondary);
+    background-color: var(--ui-white);
     z-index: 4; /* Make sure selected is always above */
 }
 
@@ -163,7 +163,7 @@
 .tab.is-selected:focus {
     outline: none;
     box-shadow: none;
-    border-color: $ui-black-transparent;
+    border-color: var(--ui-black-transparent);
 }
 
 .tab.is-selected:focus:after {
@@ -205,8 +205,8 @@
     display: flex;
     flex-direction: column;
     /* pad entire wrapper to the left and right; allow children to fill width */
-    padding-left: $space;
-    padding-right: $space;
+    padding-left: var(--space);
+    padding-right: var(--space);
 
     /* this will only ever be as wide as the stage */
     flex-basis: 0;
@@ -217,7 +217,7 @@
     flex-grow: 1;
     flex-basis: 0;
 
-    padding-top: $space;
+    padding-top: var(--space);
     min-height: 0; /* this makes it work in Firefox */
 
     /*
@@ -235,22 +235,22 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: $z-index-extension-button;
-    background: $looks-secondary;
+    z-index: var(--z-index-extension-button);
+    background: var(--looks-secondary);
 
-    border: 1px solid $looks-secondary;
+    border: 1px solid var(--looks-secondary);
     box-sizing: content-box; /* To match scratch-block vertical toolbox borders */
 }
 
-$fade-out-distance: 15px;
+
 
 .extension-button-container:before {
     content: "";
     position: absolute;
-    top: calc(calc(-1 * $fade-out-distance) - 1px);
+    top: calc(calc(-1 * var(--fade-out-distance)) - 1px);
     left: -1px;
     background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15));
-    height: $fade-out-distance;
+    height: var(--fade-out-distance);
     width: calc(100% + 0.5px);
 }
 
@@ -296,7 +296,7 @@ $fade-out-distance: 15px;
 
 .menu-bar-position {
     position: relative;
-    z-index: $z-index-menu-bar;
+    z-index: var(--z-index-menu-bar);
 }
 /* Alerts */
 
@@ -304,7 +304,7 @@ $fade-out-distance: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: $z-index-alerts;
+    z-index: var(--z-index-alerts);
     position: absolute;
     margin-top: 53px;
     pointer-events: none;
@@ -316,4 +316,8 @@ $fade-out-distance: 15px;
 */
 :global(.ReactModal__Body--open) {
     overflow: hidden;
+}
+
+body {
+  --fade-out-distance: 15px;
 }

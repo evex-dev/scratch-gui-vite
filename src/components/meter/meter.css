@@ -27,6 +27,10 @@
     width: 100%;
     transform-origin: top;
     will-change: transform;
-    background: $ui-primary;
+    background: var(--ui-primary);
     opacity: 0.75;
+}
+
+body {
+
 }
