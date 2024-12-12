@@ -41,7 +41,7 @@ import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
 import DebugModal from '../debug-modal/debug-modal.jsx';
-console.log(styles)
+
 const tabStyles = {
     reactTabsTab: 'react-tabs__tab',
     reactTabsTabList: 'react-tabs__tab-list',
