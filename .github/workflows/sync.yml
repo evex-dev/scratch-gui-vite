@@ -19,13 +19,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # with:
-        #   ref: upstream
+        with:
+          ref: upstream
 
       - name: Custom commands
         if: ${{ inputs.cmd != '' }}
@@ -37,7 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote add up https://github.com/scratchfoundation/scratch-gui.git
-          git switch -c upstream
+          # git switch -c upstream
           git pull up develop
           git push -u origin upstream
           git push
