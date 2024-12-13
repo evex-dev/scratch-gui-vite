@@ -11,8 +11,8 @@ on:
         required: false
         default: ''
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
 concurrency:
   group: "sync"
@@ -28,8 +28,7 @@ jobs:
         #   ref: upstream
         run: |
           git clone --depth=1 -b upstream \
-            'https://github-actions[bot]:${{ github.token }}@github.com/${{ github.repository }}' \
-            .
+            'https://akku1139:${{ srcrets.PAT }}@github.com/${{ github.repository }}' .
 
       - name: Custom commands
         if: ${{ inputs.cmd != '' }}
