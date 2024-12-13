@@ -26,7 +26,7 @@ jobs:
         # uses: actions/checkout@v4
         # with:
         #   ref: upstream
-        run: git clone --depth=1 -b upstream https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+        run: git clone --depth=1 -b upstream https://github-actions:${{ github.token }}@github.com/${{ github.repository }}
 
       - name: Custom commands
         if: ${{ inputs.cmd != '' }}
