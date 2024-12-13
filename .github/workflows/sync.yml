@@ -23,9 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: upstream
+        # uses: actions/checkout@v4
+        # with:
+        #   ref: upstream
+        run: git clone --depth=1 -b upstream https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${{ github.repository }}
 
       - name: Custom commands
         if: ${{ inputs.cmd != '' }}
