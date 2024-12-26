@@ -28,8 +28,12 @@ jobs:
         #   ref: upstream
         # ${{ secrets.PAT }}: akku's personal token
         run: |
+          cat > /tmp/key.private << EOL
+          ${{ secrets.SYNC_PRIVATE_KEY }}
+          EOL
           git clone --depth=1 -b upstream \
-            'https://akku1139:${{ secrets.PAT }}@github.com/${{ github.repository }}' .
+            -c "core.sshCommand=ssh -i /tmp/key.private -F /dev/null" \
+            'git@github.com:${{ github.repository }}' .
 
       - name: Custom commands
         if: ${{ inputs.cmd != '' }}
