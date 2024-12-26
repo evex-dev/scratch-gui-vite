@@ -31,6 +31,7 @@ jobs:
           cat > /tmp/key.private << EOL
           ${{ secrets.SYNC_PRIVATE_KEY }}
           EOL
+          chmod 600 /tmp/key.private
           git clone --depth=1 -b upstream \
             -c "core.sshCommand=ssh -i /tmp/key.private -F /dev/null" \
             'git@github.com:${{ github.repository }}' .
