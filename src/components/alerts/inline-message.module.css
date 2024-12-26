@@ -1,0 +1,31 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+
+.inline-message {
+    color: var(--ui-white);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: .8125rem;
+}
+
+.success {
+    color: var(--ui-white-dim);
+}
+
+.info {
+    color: var(--ui-white);
+}
+
+.warn {
+    color: var(--error-light);
+}
+
+.spinner {
+    margin-right: var(--space);
+}
+
+body {
+
+}

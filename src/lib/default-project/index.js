@@ -9,13 +9,7 @@ import costume2 from '!raw-loader!./0fb9be3e8397c983338cb71dc84d0b25.svg?';
 /* eslint-enable import/no-unresolved */
 
 const defaultProject = translator => {
-    let _TextEncoder;
-    if (typeof TextEncoder === 'undefined') {
-        _TextEncoder = require('fastestsmallesttextencoderdecoder').TextEncoder;
-    } else {
-        _TextEncoder = TextEncoder;
-    }
-    const encoder = new _TextEncoder();
+    const encoder = new TextEncoder();
 
     const projectJson = projectData(translator);
     return [{

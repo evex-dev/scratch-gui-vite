@@ -7,7 +7,7 @@ import GreenFlag from '../green-flag/green-flag.jsx';
 import StopAll from '../stop-all/stop-all.jsx';
 import TurboMode from '../turbo-mode/turbo-mode.jsx';
 
-import styles from './controls.css';
+import styles from './controls.module.css';
 
 const messages = defineMessages({
     goTitle: {

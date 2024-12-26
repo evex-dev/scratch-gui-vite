@@ -1,0 +1,45 @@
+@import "../../css/colors.css";
+
+.container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.dial-container {
+    position: relative;
+}
+
+.dial-face, .dial-handle, .gauge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+.dial-face {
+    width: 100%;
+}
+
+
+
+.dial-handle {
+    cursor: pointer;
+    width: var(--dial-size);
+    height: var(--dial-size);
+    /* Use margin to make positioning via top/left easier */
+    margin-left: calc(var(--dial-size) / -2);
+    margin-top: calc(var(--dial-size) / -2);
+}
+
+.gauge-path {
+    fill: var(--looks-transparent);
+    stroke: var(--looks-secondary);
+    stroke-width: 1px;
+}
+
+body {
+  --dial-size: 40px;
+}

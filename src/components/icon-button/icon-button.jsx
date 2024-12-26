@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import styles from './icon-button.css';
+import styles from './icon-button.module.css';
 
 const IconButton = ({
     img,

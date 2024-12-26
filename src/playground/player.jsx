@@ -5,37 +5,26 @@ import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
 
-import Box from '../components/box/box.jsx';
-import GUI from '../containers/gui.jsx';
+import GUI from '..';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import AppStateHOC from '../lib/app-state-hoc.jsx';
 
 import {setPlayer} from '../reducers/mode';
 
-if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
+if (import.meta.env.NODE_ENV === 'production' && typeof window === 'object') {
     // Warn before navigating away
     window.onbeforeunload = () => true;
 }
 
-import styles from './player.css';
 
 const Player = ({isPlayerOnly, onSeeInside, projectId}) => (
-    <Box className={classNames(isPlayerOnly ? styles.stageOnly : styles.editor)}>
-        {isPlayerOnly && <button onClick={onSeeInside}>{'See inside'}</button>}
-        <GUI
-            canEditTitle
-            enableCommunity
-            isPlayerOnly={isPlayerOnly}
-            projectId={projectId}
-        />
-    </Box>
+    <GUI
+        canEditTitle
+        enableCommunity
+        isPlayerOnly={isPlayerOnly}
+        projectId={projectId}
+    />
 );
-
-Player.propTypes = {
-    isPlayerOnly: PropTypes.bool,
-    onSeeInside: PropTypes.func,
-    projectId: PropTypes.string
-};
 
 const mapStateToProps = state => ({
     isPlayerOnly: state.scratchGui.mode.isPlayerOnly

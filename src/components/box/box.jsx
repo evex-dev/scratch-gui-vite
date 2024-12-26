@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import stylePropType from 'react-style-proptype';
-import styles from './box.css';
+import styles from './box.module.css';
 
 const getRandomColor = (function () {
     // In "DEBUG" mode this is used to output a random background color for each
@@ -65,7 +65,7 @@ const Box = props => {
                 width: width,
                 height: height
             },
-            process.env.DEBUG ? {
+            import.meta.env.DEBUG ? {
                 backgroundColor: getRandomColor(),
                 outline: `1px solid black`
             } : {},

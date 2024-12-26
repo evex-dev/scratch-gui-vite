@@ -1,0 +1,14 @@
+@import "../../css/colors.css";
+
+.share-button {
+    background: var(--data-primary);
+}
+
+.share-button-is-shared {
+    background: var(--ui-black-transparent);
+    cursor: default;
+}
+
+body {
+
+}

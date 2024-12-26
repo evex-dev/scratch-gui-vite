@@ -17,7 +17,7 @@ import smallStageIcon from './icon--small-stage.svg';
 import unFullScreenIcon from './icon--unfullscreen.svg';
 
 import scratchLogo from '../menu-bar/scratch-logo.svg';
-import styles from './stage-header.css';
+import styles from './stage-header.module.css';
 
 const messages = defineMessages({
     largeStageSizeMessage: {

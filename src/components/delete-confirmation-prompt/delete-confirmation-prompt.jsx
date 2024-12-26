@@ -10,7 +10,7 @@ import undoIcon from './icon--undo.svg';
 import arrowLeftIcon from './icon--arrow-left.svg';
 import arrowRightIcon from './icon--arrow-right.svg';
 
-import styles from './delete-confirmation-prompt.css';
+import styles from './delete-confirmation-prompt.module.css';
 
 // TODO: Parametrize from outside if we want more custom messaging
 const messages = defineMessages({

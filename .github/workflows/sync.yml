@@ -1,0 +1,48 @@
+name: Sync upstream branch
+
+on:
+  schedule:
+    - cron: '14 6 * * *'
+  workflow_dispatch:
+    inputs:
+      cmd:
+        type: string
+        description: 'Custom commands'
+        required: false
+        default: ''
+
+# permissions:
+#   contents: write
+
+concurrency:
+  group: "sync"
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        # uses: actions/checkout@v4
+        # with:
+        #   ref: upstream
+        # ${{ secrets.PAT }}: akku's personal token
+        run: |
+          git clone --depth=1 -b upstream \
+            'https://akku1139:${{ secrets.PAT }}@github.com/${{ github.repository }}' .
+
+      - name: Custom commands
+        if: ${{ inputs.cmd != '' }}
+        run: ${{ inputs.cmd }}
+        # ex: git fetch --depth=10 && git reset --hard 31e00b2fafa14a310fef63008e2e99dad97eb1d3 && git push -f
+
+      - name: Git
+        run: |
+          set -x
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add up https://github.com/scratchfoundation/scratch-gui.git
+          # git switch -c upstream
+          git pull up develop
+          git push -u origin upstream
+          git push
