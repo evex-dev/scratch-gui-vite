@@ -72,11 +72,20 @@ export default defineConfig({
   },
   esbuild: {
     define: {
-      global: 'globalThis'
+      global: 'globalThis',
+      'process': `{ "env": {} }`
     },
     target: 'esnext'
   },
   build: {
     target: 'esnext'
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'globalThis',
+        'process': `{ "env": {} }`
+      }
+    }
   }
 })

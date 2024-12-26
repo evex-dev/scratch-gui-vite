@@ -3,6 +3,7 @@ import React from 'react';
 import bindAll from 'lodash.bindall';
 import VM from 'scratch-vm';
 import PaintEditor from '@evex-dev/scratch-paint';
+import '@evex-dev/scratch-paint/css';
 import {inlineSvgFonts} from 'scratch-svg-renderer';
 
 import {connect} from 'react-redux';
@@ -48,13 +49,15 @@ class PaintEditorWrapper extends React.Component {
         } = this.props;
 
         return (
-            <PaintEditor
-                {...componentProps}
-                image={vm.getCostume(selectedCostumeIndex)}
-                onUpdateImage={this.handleUpdateImage}
-                onUpdateName={this.handleUpdateName}
-                fontInlineFn={inlineSvgFonts}
-            />
+            <div>
+                <PaintEditor
+                    {...componentProps}
+                    image={vm.getCostume(selectedCostumeIndex)}
+                    onUpdateImage={this.handleUpdateImage}
+                    onUpdateName={this.handleUpdateName}
+                    fontInlineFn={inlineSvgFonts}
+                />
+            </div>
         );
     }
 }

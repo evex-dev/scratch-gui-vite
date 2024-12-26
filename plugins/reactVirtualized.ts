@@ -1,6 +1,6 @@
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { PluginOption } from 'vite';
 
 export function reactVirtualized(): PluginOption {
